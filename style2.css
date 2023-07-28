@@ -1,0 +1,153 @@
+:root {
+  --dark-blue: #000000;
+  --blue: #fffb0f;
+  --light-blue: rgb(0, 0, 0);
+  --pink: rgb(255, 40, 113);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  height: 100vh;
+  font-family: sans-serif;
+  background-color: rgb(0, 0, 0);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  text-align: center;
+  padding: 40px;
+  background-color: #000000;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header h1 {
+  animation: fadeIn 5s ease-in-out;
+}
+header h1 {
+  color: #fffb0f;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+nav {
+  background-color: #fffb0f;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #000000;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffca28;
+}
+
+
+nav {
+  margin-bottom: 20px; /* Ajoute un espace de 20 pixels en bas de la balise <nav> */
+}
+
+.code-editor {
+  margin-top: 10px; /* Ajoute un espace de 20 pixels en haut de la balise avec la classe "code-editor" */
+  margin-left: 110px;
+  position: relative; /* Pour définir la position relative de la div */
+  bottom: 20px; /* Le décalage vers le haut que vous souhaitez appliquer */
+}
+
+.code-editor {
+  position: static; /* Réinitialiser la position à sa valeur par défaut */
+  bottom: 100px; /* Réinitialiser la valeur de bottom à sa valeur par défaut */
+  top: 100px; /* Réinitialiser la valeur de top à sa valeur par défaut */
+}
+
+
+.code-editor {
+  width: 90vw;
+  height: 90vh;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #fff;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  border: 5px solid var(--blue);
+}
+
+.code {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  overflow-y: auto;
+
+  background-color: var(--dark-blue);
+  padding: 1rem;
+  border-radius: 0 1rem 1rem 0;
+}
+
+h1 {
+  font: 600 1.2rem sans-serif;
+  margin: 1rem 0;
+  color: #fff;
+}
+
+h1 > img {
+  width: 1.3rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.code textarea {
+  width: 100%;
+  height: calc(100% - 4rem);
+  background-color: var(--blue);
+  color: var(--light-blue);
+  border: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  resize: vertical;
+}
+
+.code textarea::-webkit-scrollbar {
+  width: .4rem;
+}
+.code textarea::-webkit-scrollbar-thumb {
+  background-color: var(--pink);
+  border-radius: .4rem;
+}
+
+#result {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
